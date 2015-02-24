@@ -13,6 +13,9 @@
 		9648364C1A942387000DE749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9648364B1A942387000DE749 /* Images.xcassets */; };
 		9648364F1A942387000DE749 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9648364D1A942387000DE749 /* LaunchScreen.xib */; };
 		9648365B1A942387000DE749 /* instagramDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648365A1A942387000DE749 /* instagramDemoTests.swift */; };
+		964836651A9424A7000DE749 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964836641A9424A7000DE749 /* PhotoCell.swift */; };
+		9685268B1A991D860008A98A /* dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9685268A1A991D860008A98A /* dummy.m */; };
+		9A752914FC0DB53BD021E7E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D99BBE44016CD649D6671A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 		964836541A942387000DE749 /* instagramDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instagramDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		964836591A942387000DE749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9648365A1A942387000DE749 /* instagramDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramDemoTests.swift; sourceTree = "<group>"; };
+		964836641A9424A7000DE749 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		968526891A991D860008A98A /* instagramDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "instagramDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		9685268A1A991D860008A98A /* dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dummy.m; sourceTree = "<group>"; };
+		A7E86C40DAC2F7718A60133E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CF01B4FBE6904D30DAF78B5C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F7D99BBE44016CD649D6671A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A752914FC0DB53BD021E7E1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +66,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		487C9F0A02F2EB8A0240D802 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF01B4FBE6904D30DAF78B5C /* Pods.debug.xcconfig */,
+				A7E86C40DAC2F7718A60133E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		964836361A942387000DE749 = {
 			isa = PBXGroup;
 			children = (
 				964836411A942387000DE749 /* instagramDemo */,
 				964836571A942387000DE749 /* instagramDemoTests */,
 				964836401A942387000DE749 /* Products */,
+				487C9F0A02F2EB8A0240D802 /* Pods */,
+				BDD09B9EDF2C3BACBF3B0617 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +104,9 @@
 				9648364B1A942387000DE749 /* Images.xcassets */,
 				9648364D1A942387000DE749 /* LaunchScreen.xib */,
 				964836421A942387000DE749 /* Supporting Files */,
+				964836641A9424A7000DE749 /* PhotoCell.swift */,
+				9685268A1A991D860008A98A /* dummy.m */,
+				968526891A991D860008A98A /* instagramDemo-Bridging-Header.h */,
 			);
 			path = instagramDemo;
 			sourceTree = "<group>";
@@ -112,6 +136,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BDD09B9EDF2C3BACBF3B0617 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7D99BBE44016CD649D6671A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9648365E1A942387000DE749 /* Build configuration list for PBXNativeTarget "instagramDemo" */;
 			buildPhases = (
+				5C0A8354CD2BBFC2177EF2E4 /* Check Pods Manifest.lock */,
 				9648363B1A942387000DE749 /* Sources */,
 				9648363C1A942387000DE749 /* Frameworks */,
 				9648363D1A942387000DE749 /* Resources */,
+				E2FE89FB64B645E6A053EE13 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,12 +241,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C0A8354CD2BBFC2177EF2E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2FE89FB64B645E6A053EE13 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9648363B1A942387000DE749 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				964836471A942387000DE749 /* ViewController.swift in Sources */,
+				964836651A9424A7000DE749 /* PhotoCell.swift in Sources */,
+				9685268B1A991D860008A98A /* dummy.m in Sources */,
 				964836451A942387000DE749 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,21 +403,28 @@
 		};
 		9648365F1A942387000DE749 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF01B4FBE6904D30DAF78B5C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = instagramDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "instagramDemo/instagramDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		964836601A942387000DE749 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7E86C40DAC2F7718A60133E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = instagramDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "instagramDemo/instagramDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +481,7 @@
 				964836601A942387000DE749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		964836611A942387000DE749 /* Build configuration list for PBXNativeTarget "instagramDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +490,7 @@
 				964836631A942387000DE749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
